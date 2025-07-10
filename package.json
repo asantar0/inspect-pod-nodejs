@@ -1,0 +1,27 @@
+{
+  "name": "basic-app-nodejs",
+  "version": "1.0.0",
+  "description": "NodeJS app basic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asantar0/basic-app-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/asantar0/basic-app-nodejs/issues"
+  },
+  "homepage": "https://github.com/asantar0/basic-app-nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
