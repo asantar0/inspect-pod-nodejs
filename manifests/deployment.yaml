@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: redjar-container
-          image: asantar0/redjar-test-app:7fffc96
+          image: asantar0/redjar-test-app:b9a19bd
           ports:
           - containerPort: 3000
           env:
