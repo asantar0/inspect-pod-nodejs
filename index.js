@@ -244,30 +244,30 @@ app.use('*', (req, res) => {
 });
 
 const server = app.listen(port, '0.0.0.0', () => {
-  console.log(`🚀 Servidor corriendo en puerto ${port}`);
-  console.log(`🖥️  Hostname: ${os.hostname()}`);
-  console.log(`📦 Pod IP: ${process.env.POD_IP || 'No disponible'}`);
-  console.log(`🏷️  Pod Name: ${process.env.POD_NAME || 'No disponible'}`);
-  console.log(`📁 Namespace: ${process.env.POD_NAMESPACE || 'No disponible'}`);
-  console.log(`🖥️  Node: ${process.env.NODE_NAME || 'No disponible'}`);
-  console.log(`⏰ Iniciado: ${new Date().toISOString()}`);
-  console.log(`📊 Node.js version: ${process.version}`);
-  console.log(`💾 Memory: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB used`);
+  console.log(`Server running on port: ${port}`);
+  console.log(`Hostname: ${os.hostname()}`);
+  console.log(`Pod IP: ${process.env.POD_IP || 'No disponible'}`);
+  console.log(`Pod Name: ${process.env.POD_NAME || 'No disponible'}`);
+  console.log(`Namespace: ${process.env.POD_NAMESPACE || 'No disponible'}`);
+  console.log(`Node: ${process.env.NODE_NAME || 'No disponible'}`);
+  console.log(`Started: ${new Date().toISOString()}`);
+  console.log(`Node.js version: ${process.version}`);
+  console.log(`Memory: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB used`);
 });
 
 // Graceful shutdown for Node.js 24
 process.on('SIGTERM', () => {
-  console.log('🛑 SIGTERM received, shutting down gracefully...');
+  console.log('SIGTERM received, shutting down gracefully...');
   server.close(() => {
-    console.log('✅ Server closed');
+    console.log('Server closed');
     process.exit(0);
   });
 });
 
 process.on('SIGINT', () => {
-  console.log('🛑 SIGINT received, shutting down gracefully...');
+  console.log('SIGINT received, shutting down gracefully...');
   server.close(() => {
-    console.log('✅ Server closed');
+    console.log('Server closed');
     process.exit(0);
   });
 });
